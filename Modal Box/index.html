@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Box</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="openBox()">
+            Submit
+        </button>
+        <div class="popup" id="modal">
+            <img src="tick.png" alt="tick">
+            <h2>Thank You!</h2>
+            <p>Your details have been submitted</p>
+            <button type="button" onclick="closeBox()">OK</button>
+        </div>
+    </div>
+    <script>
+        var popup = document.getElementById("modal");
+        function openBox(){
+            popup.classList.add("open");
+        }
+
+        function closeBox(){
+            popup.classList.remove("open");
+        }
+    </script>
+</body>
+</html>
