@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> Basic animations Part-2</title>
+        <script type="text/javascript">
+           
+           var width=100;
+           var difference=2;
+           var intervalID=0;
+           //document.getElementById("img1").style.width=width;
+           function increase()
+           {
+            clearInterval(intervalID);
+            intervalID=setInterval(expand,20);
+           }
+           function decrease()
+           {
+            clearInterval(intervalID);
+            intervalID=setInterval(shrink,20);
+           }
+           function expand()
+           {
+                if (width<200)
+                {
+                    width+=difference;
+                    document.getElementById("img1").style.width=width;
+                }
+                else
+                {
+                    clearInterval(intervalID);
+                }
+           }
+           function shrink()
+           {
+                if (width>100)
+                {
+                    width-=difference;
+                    document.getElementById("img1").style.width=width;
+                }
+                else
+                {
+                    clearInterval(intervalID);
+                }
+           }
+        </script>
+    </head>
+    <body>
+        <br>
+        <br>
+        <img onmouseover="increase()" onmouseout="decrease()" id="img1" src="13.jpg" width=100>
+    </body>
+</html>
