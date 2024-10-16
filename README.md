@@ -1,2 +1,1 @@
-# 30-days-JS
-30 mini projects to enhance JS skills
+mini projects to enhance JS skills
